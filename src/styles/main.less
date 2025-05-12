@@ -19,10 +19,17 @@ body{
     color: @corDosTextos;
 }
 
+li{
+    list-style: none;
+}
+
+
+
 .container{
     max-width: 960px;
     width: 100%;
     margin: 0 auto;
+    height: 100vh;
 
     @media @breakpointTablet{
     max-width: 80%;
@@ -70,12 +77,40 @@ border-radius: 50%;
     margin: 0 auto;
 
     li{
-        list-style: none;
         img {
             transition: all ease .3s;
             &:hover{
             transform: scale(1.3);
             }
         }
+    }
+}
+
+
+    .projetos-relevantes{
+    margin-top: 32px;
+    text-align: center;
+    }
+
+.projects-list{
+    margin-top: 32px;
+    &-item{
+        a{
+            text-decoration: none;
+            background-color: #colors[buttonColor];
+            display: block;
+            padding: 20px 20px;
+            margin-bottom: 16px;
+            text-align: center;
+            color: #colors[textColor];
+            border: 2px solid #colors[buttonColor];
+            transition: all ease 0.5s;
+
+            &:hover{
+            color:#colors[buttonColor] ;
+            background-color: transparent;
+        }
+        }
+
     }
 }
